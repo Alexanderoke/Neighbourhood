@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 from django.contrib.auth.models import User
 from hood.models import *
@@ -10,7 +11,7 @@ class Profile(models.Model):
   name = models.CharField(max_length=200)
   user = models.OneToOneField(User, on_delete=models.CASCADE,related_name='profile')
   neighbourhood = models.ForeignKey(NeighbourHood, on_delete=models.SET_NULL, null=True, related_name='members', blank=True)
-  profile_image =models.ImageField(upload_to='images/')  
+  profile_image =models.ImageField(upload_to='images/', default='https://png.pngtree.com/png-clipart/20190619/original/pngtree-vector-avatar-icon-png-image_4013749.jpg')  
 
 
 def __str__(self):
