@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.contrib import auth,messages
 from .forms import BussinessRegisterForm
 from .models import Bussiness
 
@@ -13,12 +14,24 @@ def home(request):
 
 
 def bussiness(request):
-  form = BussinessRegisterForm(request.POST,request.FILES)
-  if form.is_valid():    
-    form.save()
+  
   context ={
-    'form':BussinessRegisterForm(),
+    
     'title':'Bussiness',
-    'posts':Bussiness.objects.all()
+    
   }
   return render(request, 'hood/bussiness.html',context)
+
+def post(request):
+    if request.method=="POST":
+        form = BussinessRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request,"Business sucessfuly Posted.")
+            return redirect('bussiness')   
+    else:
+        messages.error(request,"Invalid Information")
+        form = BussinessRegisterForm()
+    context={
+        "form":form}
+    return render(request,'hood/post.html',context)

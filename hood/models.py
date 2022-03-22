@@ -34,7 +34,7 @@ class Bussiness(models.Model):
   owner_name = models.CharField(max_length=150, null= True)
   Business_name = models. CharField(max_length=200)
   Business_email = models.EmailField(max_length=200)
-  NeighbourHood_Id = models.ForeignKey(NeighbourHood, on_delete=models.CASCADE, related_name='business', )
+  user = models.ForeignKey(User, on_delete=models.CASCADE, default=True)
 
 def __str__(self):
   return f'{self.Business_name} Bussiness'
