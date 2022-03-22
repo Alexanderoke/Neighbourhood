@@ -14,6 +14,7 @@ def home(request):
 
 
 def bussiness(request):
+    
   
   context ={
     
