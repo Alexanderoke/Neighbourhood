@@ -8,6 +8,7 @@ This web app allows members of a neighbourhood come together as a community and 
 * on the terminal type pythone manage.py runserver
 you will need python 3. and above to run the app
 ## Live link
+https://neighbourhoodoke.herokuapp.com/
 ## Known Bugs
 The web app runs well though the search business function not work as expected.
 ## Technologies Used
