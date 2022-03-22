@@ -37,10 +37,10 @@ class Bussiness(models.Model):
   NeighbourHood_Id = models.ForeignKey(NeighbourHood, on_delete=models.CASCADE, related_name='business', )
 
 def __str__(self):
-  return self.Business_name
+  return f'{self.Business_name} Bussiness'
 
 def create_business(self):
-        self.save()
+  self.save()
 
 def delete_business(self):
   self.delete()

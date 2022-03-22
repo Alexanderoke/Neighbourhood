@@ -1,0 +1,12 @@
+{% extends "hood/base.html" %}
+{% load static %}
+{% block content %}
+
+<h1>bussinesses in the Neighborhood</h1>
+  {% for bussiness in bussinesses %}
+      {{Bussiness.owner_name}}
+      {{Bussiness.Business_name}}
+      {{Bussiness.Business_email}}
+  {% endfor %}
+
+{% endblock content %}

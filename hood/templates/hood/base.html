@@ -18,7 +18,7 @@
 <body>
 
 
-  <div class="container text-white">
+  <div class="container">
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-secondary fixed-top">
         <div class="container">
@@ -40,7 +40,7 @@
               {% if user.is_authenticated %}
                 <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
                 <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
-                <a class="nav-item nav-link" href="/upload">Post Bussiness</a>
+                <a class="nav-item nav-link" href="#">Post Bussiness</a>
               {% else %}
                 <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
                 <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
@@ -59,7 +59,7 @@
 
 
 
-  <div class="container">
+  <div class="container mt-5">
     <div class="row">
       <div class="col">
         {% block content %}

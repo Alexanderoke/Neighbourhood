@@ -11,11 +11,11 @@ def register(request):
       form.save()
       username =form.cleaned_data.get('username')
       messages.success(request, f'Account successfully created for {username}! You can now Log in')
-      return redirect('user-login')
+      return redirect('login')
   else:
     form =UserRegisterForm()  
   return render(request,'user/register.html',{'form':form})
-  return render(request,'user/register.html')
+  # return render(request,'user/register.html')
 
 
 def login(request):
