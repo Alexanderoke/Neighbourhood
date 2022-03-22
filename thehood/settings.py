@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'hood',
     'bootstrap5',
     'user',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
