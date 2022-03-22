@@ -1,6 +1,6 @@
 .bodyy{
   
-  background-image: url("/static/images/hood.jpg");
+  background-image: url("/static/images/hood.jpg")cover;
   height:max-content;
   width:fit-content;
   padding: 50px 0 0 0;   
