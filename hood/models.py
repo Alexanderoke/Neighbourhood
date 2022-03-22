@@ -31,9 +31,10 @@ def find_neighborhood(cls, neighborhood_id):
 
 
 class Bussiness(models.Model):
+  owner_name = models.CharField(max_length=150, null= True)
   Business_name = models. CharField(max_length=200)
   Business_email = models.EmailField(max_length=200)
-  NeighbourHood_Id = models.ForeignKey(NeighbourHood, on_delete=models.CASCADE, related_name='business')
+  NeighbourHood_Id = models.ForeignKey(NeighbourHood, on_delete=models.CASCADE, related_name='business', )
 
 def __str__(self):
   return self.Business_name
